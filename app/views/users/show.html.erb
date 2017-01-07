@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @user.website %>
+</p>
+
+<p>
+  <strong>Shortened url:</strong>
+  <%= @user.shortened_url %>
+</p>
+
+<p>
+  <strong>Expertises</strong>
+  <% @user.expertises.each do |expertise| %>
+  <%= expertise.description %><br>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
